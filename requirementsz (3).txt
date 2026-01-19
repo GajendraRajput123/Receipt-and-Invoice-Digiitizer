@@ -1,0 +1,17 @@
+streamlit 
+google-generativeai 
+pillow 
+pandas
+streamlit-mic-recorder
+streamlit-TTS
+gTTS
+paddlepaddle 
+paddleocr
+opencv-python 
+numpy
+pytesseract
+pdf2image
+streamlit-oauth
+streamlit-oauth 
+face_recognition 
+opencv-python-headless
