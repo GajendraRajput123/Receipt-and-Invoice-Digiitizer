@@ -1,13 +1,14 @@
 streamlit
-groq
-google-generativeai
-Pillow
 pandas
 numpy
 plotly
+groq
+XlsxWriter
+Pillow
 opencv-python-headless
 pytesseract
 pdf2image
+google-generativeai
 gTTS
 streamlit-mic-recorder
 streamlit-TTS
