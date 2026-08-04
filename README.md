@@ -2,4 +2,4 @@
 
 ## Live Demo
 
-🚀 Streamlit App: https://your-app-name.streamlit.app
+🚀 Streamlit App: https://receipt-and-invoice-digiitizer-fmf2cb2tvavqwjeenmwhyr.streamlit.app/
