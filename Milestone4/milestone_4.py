@@ -101,17 +101,10 @@ def init_db():
         for idx in indexes:
             c.execute(idx)
 
-def check_if_receipt_exists(merchant, date, total, invoice_number):
-
-    # Handle missing merchant name
-    if merchant is None:
-        merchant = ""
-    else:
-        merchant = str(merchant)
-
-    m1 = merchant.lower().strip()
-
-
+def check_if_receipt_exists(merchant, date, total, invoice_num):
+    """Optimized duplicate detection using SQL-level filtering"""
+    with get_db_connection() as conn:
+        c = conn.cursor()
 
         # Build SQL query with proper filtering
         query = """
