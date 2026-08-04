@@ -1,2 +1,5 @@
-# Receipt-and-Invoice-Digiitizer
-Creating a new project
+# Receipt & Invoice Digitizer
+
+## Live Demo
+
+🚀 Streamlit App: https://your-app-name.streamlit.app
