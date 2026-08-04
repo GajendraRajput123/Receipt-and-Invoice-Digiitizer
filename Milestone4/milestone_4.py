@@ -596,21 +596,30 @@ def calculate_parsing_score(data):
 
 def find_matching_template(merchant_name):
     """Finds a template based on merchant name or known aliases"""
-    clean_name = merchant_name.lower().strip()
+
+    # Handle None or empty merchant names
+    if merchant_name is None:
+        return None
+
+    merchant_name = str(merchant_name).strip()
+
+    if merchant_name == "":
+        return None
+
+    clean_name = merchant_name.lower()
 
     if clean_name in VENDOR_TEMPLATES:
         return VENDOR_TEMPLATES[clean_name]
 
     for vendor_key, template_data in VENDOR_TEMPLATES.items():
-        if clean_name == vendor_key or clean_name in template_data['aliases']:
+        if clean_name == vendor_key or clean_name in template_data.get("aliases", []):
             return template_data
 
     for vendor_key, template_data in VENDOR_TEMPLATES.items():
         if vendor_key in clean_name:
-             return template_data
+            return template_data
 
     return None
-
 def apply_template_parsing(standard_data):
     """Takes standard AI-parsed data and refines it using vendor templates"""
     refined_data = standard_data.copy()
